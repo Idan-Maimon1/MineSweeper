@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 13, 13);
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    background-color: rgb(167, 213, 254);
+    transition: 250ms;
+}
+
+.cell:hover {
+    background-color: rgb(50, 122, 222);
+    cursor: pointer;
+}
+
+.cell img {
+    width: 45px;
+    height: auto;
+}
+
+.showncell img {
+    width: 45px;
+    height: auto;
+}
+
+.showncell {
+    background-color: rgb(204, 228, 250);
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+.showncell:hover{
+    background-color: rgb(204, 228, 250);
+    cursor:auto
+}
+.timer{
+    text-align: center;
+    height: 120px;
+    width: 300px;
+    background-color: aquamarine;
+    font-size: 95px;
+    border: 10px solid black;
+    border-radius: 25px;
+}
