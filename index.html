@@ -9,18 +9,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="initGame()" onclick="startGame()" oncontextmenu="startGame()">
+<body onload="initGame()">
+    <div class="heading">
+        <img class="mainh" src="img/m.png"></img>
+        <img class="secondh" src="img/s.png"></img>
+    </div>
+    <div class="content" oncontextmenu="return false;">
+        <h2 class="smiley" onclick="smileyClicked(this)"><img src="img/smiley/normal.png" /></h2>
+        <div class="indicators">
+            <h2 class="timer">Timer</h2>
+            <h2 class="lives"><span>3</span> Lives left</h2>
+        </div>
 
-    <div oncontextmenu="return false;">
-
-        <p class="timer">Timer</p>
-        <table>
-            <tbody class="board"></tbody>
+        <table class="board">
+            <tbody></tbody>
         </table>
-
+        <ul class="hints">
+            <li class="hint" onclick="toggleHint(this)"><img src="img/hint/hint.png" /></li>
+            <li class="hint" onclick="toggleHint(this)"><img src="img/hint/hint.png" /></li>
+            <li class="hint" onclick="toggleHint(this)"><img src="img/hint/hint.png" /></li>
+        </ul>
+        <ul>
+            <li onclick="changeLevel(4)">Beginner</li>
+            <li onclick="changeLevel(8)">Medium</li>
+            <li onclick="changeLevel(12)">Expert</li>
+        </ul>
+        <ul>
+            <li class="safeclick" onclick="createSafeClicks(this)">safe click (<span>3</span> clicks avalible)
+                </span></li>
+        </ul>
+        <h1 class="name">Idan maimon</h1>
     </div>
     <script src="js/main.js"></script>
     <script src="js/util.js"></script>
+    <script src="js/hint.js"></script>
 </body>
 
 </html>

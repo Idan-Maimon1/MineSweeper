@@ -1,47 +1,192 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-image: url(../img/vv.jpg);
+    background-size: cover;
     color: rgb(15, 13, 13);
+    text-align: center;
+}
+
+.heading {
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+.mainh {
+    height: 80px;
+    width: auto;
+}
+
+.secondh {
+    height: 60px;
+    width: auto;
+}
+
+.safeclick {
+    width: 350px;
+    text-align: center;
+    display: inline block;
+    border: 4px solid black;
+    background-color: rgba(255, 255, 255, 0.732);
+    color: rgba(0, 0, 0, 0.616);
+}
+
+.board {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
 }
 
 .cell {
-    width: 75px;
-    height: 75px;
-    text-align: center;
-    background-color: rgb(167, 213, 254);
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(45, 136, 215, 0.867);
     transition: 250ms;
+    border: 3px solid black;
+
 }
 
 .cell:hover {
-    background-color: rgb(50, 122, 222);
+    background-color: rgba(28, 66, 119, 0.659);
     cursor: pointer;
 }
 
 .cell img {
-    width: 45px;
+    width: 80%;
     height: auto;
 }
 
 .showncell img {
-    width: 45px;
+    width: 80%;
     height: auto;
 }
 
 .showncell {
-    background-color: rgb(204, 228, 250);
-    width: 75px;
-    height: 75px;
-    text-align: center;
+    background-color: rgba(147, 192, 234, 0.822);
+    width: 50px;
+    height: 50px;
+
 }
-.showncell:hover{
-    background-color: rgb(204, 228, 250);
-    cursor:auto
+
+.showncell:hover {
+    background-color: rgba(204, 228, 250, 0.848);
+    cursor: auto
 }
-.timer{
-    text-align: center;
-    height: 120px;
-    width: 300px;
-    background-color: aquamarine;
-    font-size: 95px;
+
+.content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 780px;
     border: 10px solid black;
+    border-radius: 50px;
+    background-color: rgba(205, 240, 240, 0.486);
+}
+
+.timer {
+    height: 30px;
+    width: 85px;
+    background-color: rgba(127, 255, 212, 0.592);
+    font-size: 23px;
+    border: 2.5px solid rgba(0, 0, 0, 0.984);
     border-radius: 25px;
+    display: inline-block;
+
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-family: fantasy;
+    display: inline-block;
+    font-size: 24px;
+    color: aliceblue;
+    border: 5px solid rgba(56, 66, 138, 0.859);
+    width: 90px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(109, 90, 212, 0.621);
+    transition: 380ms;
+    text-align: center;
+
+}
+
+li:hover {
+    background-color: rgb(121, 18, 255);
+    cursor: pointer;
+
+}
+
+.name {
+    border: 5px solid black;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    border-radius: 20PX;
+    width: 250PX;
+    text-align: center;
+    display: inline-block;
+}
+
+.smiley {
+    border: 4px solid black;
+    background-color: rgba(255, 255, 255, 0.732);
+    border-radius: 28%;
+    display: inline-block;
+    height: 240px;
+    width: 240px;
+    transition: 450ms;
+}
+
+.smiley img {
+    display: inline-block;
+    height: 210px;
+    width: auto;
+}
+
+.smiley:hover {
+    cursor: pointer;
+    background-color: rgba(118, 147, 235, 0.595);
+    border: 4px solid rgb(17, 5, 5);
+}
+
+.lives {
+    height: 30px;
+    width: 130px;
+    background-color: rgba(127, 255, 212, 0.592);
+    font-size: 23px;
+    border: 2.5px solid rgba(0, 0, 0, 0.984);
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.indicators {
+    height: 50px;
+    display: block;
+}
+
+.hint img {
+    height: 30px;
+}
+
+.hint {
+    background: rgba(247, 181, 163, 0.91);
+
+}
+
+.hint:hover {
+    background: rgb(250, 153, 126);
+}
+
+.hints {
+    height: 70px;
+    display: block;
 }
