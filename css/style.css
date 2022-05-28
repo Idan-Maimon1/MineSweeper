@@ -82,7 +82,9 @@ img {
 .content {
     margin-right: auto;
     margin-left: auto;
-    width: 780px;
+    width: fit-content;
+    padding-left: 50px;
+    padding-right: 50px;
     border: 10px solid black;
     border-radius: 50px;
     background-color: rgba(205, 240, 240, 0.486);
@@ -101,6 +103,8 @@ img {
 
 ul {
     list-style: none;
+    padding-inline-start: 0px;
+
 }
 
 li {
