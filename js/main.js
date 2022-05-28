@@ -110,11 +110,20 @@ function createMines(board) {
             i: getRandomInt(0, board.length),
             j: getRandomInt(0, board[0].length)
         }
-        while (cellClickedCount > 0 && mine.i === gFirstCell[0] && mine.j === gFirstCell[1]) {
+        while ((cellClickedCount > 0 && mine.i === gFirstCell[0] && mine.j === gFirstCell[1])) {
             var mine =
             {
                 i: getRandomInt(0, board.length),
                 j: getRandomInt(0, board[0].length)
+            }
+        }
+        for (var d = 0; d < minesLocs.length; d++) {
+            while (mine === minesLocs[d]) {
+                var mine =
+                {
+                    i: getRandomInt(0, board.length),
+                    j: getRandomInt(0, board[0].length)
+                }
             }
         }
         minesLocs.push(mine)
@@ -287,7 +296,7 @@ function changeLevel(level = gLevel.SIZE) {
     var elLivesCount = document.querySelector('.lives span')
     elLivesCount.innerHTML = glivesLeft
 
-    
+
     resetVars()
     initGame()
 }
