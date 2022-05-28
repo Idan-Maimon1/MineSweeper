@@ -269,19 +269,25 @@ function updateTime(time = gGame.secsPassed.toFixed(3)) {
 }
 
 function changeLevel(level = gLevel.SIZE) {
+    var elBody = document.querySelector('body')
     if (level === 4) {
         gLevel.SIZE = 4
         gLevel.MINES = 2
+        elBody.style.zoom = 0.59
     } else if (level === 8) {
         gLevel.SIZE = 8
         gLevel.MINES = 12
+        elBody.style.zoom = 0.5
     } else if (level === 12) {
         gLevel.SIZE = 12
         gLevel.MINES = 30
+        elBody.style.zoom = 0.43
     }
     glivesLeft = 3
     var elLivesCount = document.querySelector('.lives span')
     elLivesCount.innerHTML = glivesLeft
+
+    
     resetVars()
     initGame()
 }
@@ -312,7 +318,7 @@ function smileyClicked(smiley) {
 }
 
 function createSafeClicks(elButton) {
-    if(gSafeClicksLeft < 1) {
+    if (gSafeClicksLeft < 1) {
         return
     }
     if (gSafeClicksLeft === 1) {
