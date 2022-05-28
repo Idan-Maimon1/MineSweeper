@@ -110,8 +110,17 @@ function createMines(board) {
             i: getRandomInt(0, board.length),
             j: getRandomInt(0, board[0].length)
         }
+        mine = checkIsCellEmpty(board, mine, minesLocs)
+        mine = checkIsCellEmpty(board, mine, minesLocs)
+        minesLocs.push(mine)
+    } return minesLocs
+}
+
+function checkIsCellEmpty(board, mine, minesLocs) {
+    if (minesLocs.length < 2) return mine
+    else {
         while ((cellClickedCount > 0 && mine.i === gFirstCell[0] && mine.j === gFirstCell[1])) {
-            var mine =
+            mine =
             {
                 i: getRandomInt(0, board.length),
                 j: getRandomInt(0, board[0].length)
@@ -119,15 +128,14 @@ function createMines(board) {
         }
         for (var d = 0; d < minesLocs.length; d++) {
             while (mine === minesLocs[d]) {
-                var mine =
+                mine =
                 {
                     i: getRandomInt(0, board.length),
                     j: getRandomInt(0, board[0].length)
                 }
             }
         }
-        minesLocs.push(mine)
-    } return minesLocs
+    } return mine
 }
 
 function getClassName(location) {
